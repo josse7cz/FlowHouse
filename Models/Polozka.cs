@@ -8,7 +8,7 @@ namespace FlowHouse.Models
 {
     public class Polozka
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        //[DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Display(Name = "Number")]
         public int PolozkaID { get; set; }
         [Required]
@@ -21,7 +21,7 @@ namespace FlowHouse.Models
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime DatumNaskladneni { get; set; }
 
-        public int OddeleniID { get; set; }
+        public int? OddeleniID { get; set; }
 
         public Oddeleni Oddeleni { get; set; }
 

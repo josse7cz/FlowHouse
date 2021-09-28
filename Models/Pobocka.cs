@@ -9,6 +9,8 @@ namespace FlowHouse.Models
 {
     public class Pobocka
     {
+
+        public int PobockaID { get; set; }
         [Key]
         public int ProdavacID { get; set; }
         [StringLength(50)]
