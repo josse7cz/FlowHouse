@@ -99,7 +99,7 @@ namespace FlowHouse.Controllers
         // GET: Items/Create
         public IActionResult Create()
         {
-            ViewData["OddeleniID"] = new SelectList(_context.Oddelenis, "OddeleniID", "OddeleniID");
+            ViewData["OddeleniID"] = new SelectList(_context.Departments, "OddeleniID", "OddeleniID");
             return View();
         }
 
@@ -116,7 +116,7 @@ namespace FlowHouse.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["OddeleniID"] = new SelectList(_context.Oddelenis, "OddeleniID", "OddeleniID", polozka.OddeleniID);
+            ViewData["OddeleniID"] = new SelectList(_context.Departments, "OddeleniID", "OddeleniID", polozka.OddeleniID);
             return View(polozka);
         }
 
@@ -133,7 +133,7 @@ namespace FlowHouse.Controllers
             {
                 return NotFound();
             }
-            ViewData["OddeleniID"] = new SelectList(_context.Oddelenis, "OddeleniID", "OddeleniID", polozka.OddeleniID);
+            ViewData["OddeleniID"] = new SelectList(_context.Departments, "OddeleniID", "OddeleniID", polozka.OddeleniID);
             return View(polozka);
         }
 
@@ -169,7 +169,7 @@ namespace FlowHouse.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["OddeleniID"] = new SelectList(_context.Oddelenis, "OddeleniID", "OddeleniID", polozka.OddeleniID);
+            ViewData["OddeleniID"] = new SelectList(_context.Departments, "OddeleniID", "OddeleniID", polozka.OddeleniID);
             return View(polozka);
         }
 

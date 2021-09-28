@@ -9,7 +9,7 @@ namespace FlowHouse.Models
 {
     public class Prodavac
     {
-        public int ID { get; set; }
+        public int ProdavacID { get; set; }
 
         [Required]
         [Display(Name = "Příjmení")]
@@ -35,5 +35,7 @@ namespace FlowHouse.Models
 
         public ICollection<ProdejZadani> ProdejZadani { get; set; }
         public Pobocka Pobocka { get; set; }
+
+        public Oddeleni Oddeleni { get; set; }
     }
 }

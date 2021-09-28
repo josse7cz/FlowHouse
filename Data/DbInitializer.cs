@@ -35,25 +35,25 @@ namespace FlowHouse.Data
             }
             context.SaveChanges();
 
-            //var polozky = new Polozka[]
-            //{
-            //new Polozka{Nazev="rohlik",Cena=3,Pocet=2 },
-            //new Polozka{Nazev="chleba",Cena=3,Pocet=2 },
-            //new Polozka{Nazev="makarony",Cena=3,Pocet=2 },
-            //new Polozka{Nazev="cibule",Cena=4,Pocet=2 },
-            //new Polozka{Nazev="turistický salám",Cena=4,Pocet=2 },
-            //new Polozka{Nazev="kotevník",Cena=3,Pocet=2 },
-            //new Polozka{Nazev="lilek",Cena=4,Pocet=2 }
-            //};
-            //foreach (Polozka c in polozky)
-            //{
-            //    context.Polozky.Add(c);
-            //}
-            //context.SaveChanges();
+            var polozky = new Polozka[]
+            {
+            new Polozka{Nazev="rohlik",Cena=3,Pocet=2 },
+            new Polozka{Nazev="chleba",Cena=3,Pocet=2 },
+            new Polozka{Nazev="makarony",Cena=3,Pocet=2 },
+            new Polozka{Nazev="cibule",Cena=4,Pocet=2 },
+            new Polozka{Nazev="turistický salám",Cena=4,Pocet=2 },
+            new Polozka{Nazev="kotevník",Cena=3,Pocet=2 },
+            new Polozka{Nazev="lilek",Cena=4,Pocet=2 }
+            };
+            foreach (Polozka c in polozky)
+            {
+                context.Polozky.Add(c);
+            }
+            context.SaveChanges();
 
             //var nakupy = new Nakup[]
             //{
-           
+
             //new Nakup{ZakaznikID=1,PolozkaID=1},
             //new Nakup{ZakaznikID=1,PolozkaID=0},
             //new Nakup{ZakaznikID=1,PolozkaID=4},
@@ -102,41 +102,41 @@ namespace FlowHouse.Data
            {
                 new Oddeleni { Jmeno = "Hracky",     Budget = 350000,
                     StartDate = DateTime.Parse("2007-09-01"),
-                    ProdavacID  = prodavaci.Single( i => i.Prijmeni== "Abercrombie").ID },
+                    ProdavacID  = prodavaci.Single( i => i.Prijmeni== "Abercrombie").ProdavacID },
                 new Oddeleni { Jmeno = "Maso", Budget = 100000,
                     StartDate = DateTime.Parse("2007-09-01"),
-                    ProdavacID  = prodavaci.Single( i => i.Prijmeni == "Fakhouri").ID },
+                    ProdavacID  = prodavaci.Single( i => i.Prijmeni == "Fakhouri").ProdavacID },
                 new Oddeleni {Jmeno = "Pecivo", Budget = 350000,
                     StartDate = DateTime.Parse("2007-09-01"),
-                    ProdavacID  = prodavaci.Single( i => i.Prijmeni== "Harui").ID },
+                    ProdavacID  = prodavaci.Single( i => i.Prijmeni== "Harui").ProdavacID },
                 new Oddeleni { Jmeno = "Drogerie",   Budget = 100000,
                     StartDate = DateTime.Parse("2007-09-01"),
-                    ProdavacID  = prodavaci.Single( i => i.Prijmeni == "Kapoor").ID }
+                    ProdavacID  = prodavaci.Single( i => i.Prijmeni == "Kapoor").ProdavacID }
            };
 
             foreach (Oddeleni o in oddeleni)
             {
-                context.Oddelenis.Add(o);
+                context.Departments.Add(o);
             }
             context.SaveChanges();
 
 
 
 
-            var polozky = new Polozka[]
-            {
-                new Polozka {Nazev = "Rohlík", Cena = 2,
-                    OddeleniID = oddeleni.Single( s => s.Jmeno == "Pecivo").OddeleniID
-                },
-                new Polozka { Nazev = "Svíčková", Cena = 200,Pocet=5,
-                    PolozkaID = oddeleni.Single( s => s.Jmeno == "Maso").OddeleniID
-                },
-                            };
+            //var polozky = new Polozka[]
+            //{
+            //    new Polozka {Nazev = "Rohlík", Cena = 2,Pocet=2,
+            //        OddeleniID = oddeleni.Single( s => s.Jmeno == "Pecivo").OddeleniID
+            //    },
+            //    new Polozka { Nazev = "Svíčková", Cena = 200,Pocet=5,
+            //        PolozkaID = oddeleni.Single( s => s.Jmeno == "Maso").OddeleniID
+            //    },
+            //                };
 
-            foreach (Polozka c in polozky)
-            {
-                context.Polozky.Add(c);
-            }
+            //foreach (Polozka c in polozky)
+            //{
+            //    context.Polozky.Add(c);
+            //}
             context.SaveChanges();
 
 
@@ -144,13 +144,13 @@ namespace FlowHouse.Data
             var pobocky = new Pobocka[]
             {
                 new Pobocka {
-                    ProdavacID = prodavaci.Single( i => i.Prijmeni== "Fakhouri").ID,
+                    ProdavacID = prodavaci.Single( i => i.Prijmeni== "Fakhouri").ProdavacID,
                     Location = "Smith 17" },
                 new Pobocka {
-                    ProdavacID = prodavaci.Single( i => i.Prijmeni == "Harui").ID,
+                    ProdavacID = prodavaci.Single( i => i.Prijmeni == "Harui").ProdavacID,
                     Location = "Gowan 27" },
                 new Pobocka {
-                    ProdavacID = prodavaci.Single( i => i.Prijmeni == "Kapoor").ID,
+                    ProdavacID = prodavaci.Single( i => i.Prijmeni == "Kapoor").ProdavacID,
                     Location = "Thompson 304" },
             };
 
@@ -167,17 +167,17 @@ namespace FlowHouse.Data
            {
                 new ProdejZadani {
                     PolozkaID = polozky.Single(c => c.Nazev == "Svíčková" ).PolozkaID,
-                    ProdavacID = prodavaci.Single(i => i.Prijmeni == "Kapoor").ID
+                    ProdavacID = prodavaci.Single(i => i.Prijmeni == "Kapoor").ProdavacID
                     },new ProdejZadani {
                     PolozkaID = polozky.Single(c => c.Nazev == "Rohlík" ).PolozkaID,
-                    ProdavacID = prodavaci.Single(i => i.Prijmeni == "Harui").ID
+                    ProdavacID = prodavaci.Single(i => i.Prijmeni == "Harui").ProdavacID
                     },new ProdejZadani {
                     PolozkaID = polozky.Single(c => c.Nazev == "Rohlík" ).PolozkaID,
-                    ProdavacID = prodavaci.Single(i => i.Prijmeni == "Harui").ID
+                    ProdavacID = prodavaci.Single(i => i.Prijmeni == "Harui").ProdavacID
                     },
                      new ProdejZadani {
                     PolozkaID = polozky.Single(c => c.Nazev == "Svíčková" ).PolozkaID,
-                    ProdavacID = prodavaci.Single(i => i.Prijmeni == "Kapoor").ID
+                    ProdavacID = prodavaci.Single(i => i.Prijmeni == "Kapoor").ProdavacID
                     },
                 
                 
@@ -185,7 +185,7 @@ namespace FlowHouse.Data
 
             foreach (ProdejZadani ci in prodejZadani)
             {
-                context.ProdejZadanis.Add(ci);
+                context.ProdejAssigments.Add(ci);
             }
             context.SaveChanges();
 

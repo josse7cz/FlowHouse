@@ -16,10 +16,10 @@ namespace FlowHouse.Data
         public DbSet<Polozka> Polozky { get; set; }
         public DbSet<Nakup> Nakupy { get; set; }
         public DbSet<Zakaznik> Zakaznici { get; set; }
-        public DbSet<Oddeleni> Oddelenis { get; set; }
+        public DbSet<Oddeleni> Departments { get; set; }
         public DbSet<Prodavac> Prodavaci { get; set; }
         public DbSet<Pobocka> Pobocky { get; set; }
-        public DbSet<ProdejZadani> ProdejZadanis { get; set; }
+        public DbSet<ProdejZadani> ProdejAssigments { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Polozka>().ToTable("Polozka");
