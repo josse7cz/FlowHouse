@@ -18,7 +18,7 @@ namespace FlowHouse.Data
                 return;   // DB has been seeded
             }
 
-            var Zakazniks = new Zakaznik[]
+            var zakaznici = new Zakaznik[]
             {
             new Zakaznik{Jmeno="Carson",Prijmeni="Alexander",DatumRegistrace=DateTime.Parse("2005-09-01")},
             new Zakaznik{Jmeno="Meredith",Prijmeni="Alonso",DatumRegistrace=DateTime.Parse("2002-09-01")},
@@ -29,7 +29,7 @@ namespace FlowHouse.Data
             new Zakaznik{Jmeno="Laura",Prijmeni="Norman",DatumRegistrace=DateTime.Parse("2003-09-01")},
             new Zakaznik{Jmeno="Nino",Prijmeni="Olivetto",DatumRegistrace=DateTime.Parse("2005-09-01")}
             };
-            foreach (Zakaznik s in Zakazniks)
+            foreach (Zakaznik s in zakaznici)
             {
                 context.Zakaznici.Add(s);
             }
@@ -37,13 +37,13 @@ namespace FlowHouse.Data
 
             var polozky = new Polozka[]
             {
-            new Polozka{PolozkaID=1050,Nazev="Chemistry",Cena=3},
-            new Polozka{PolozkaID=4022,Nazev="Microeconomics",Cena=3},
-            new Polozka{PolozkaID=4041,Nazev="Macroeconomics",Cena=3},
-            new Polozka{PolozkaID=1045,Nazev="Calculus",Cena=4},
-            new Polozka{PolozkaID=3141,Nazev="Trigonometry",Cena=4},
-            new Polozka{PolozkaID=2021,Nazev="Composition",Cena=3},
-            new Polozka{PolozkaID=2042,Nazev="Literature",Cena=4}
+            new Polozka{Nazev="rohlik",Cena=3,Pocet=2 },
+            new Polozka{Nazev="chleba",Cena=3,Pocet=2 },
+            new Polozka{Nazev="makarony",Cena=3,Pocet=2 },
+            new Polozka{Nazev="cibule",Cena=4,Pocet=2 },
+            new Polozka{Nazev="turistický salám",Cena=4,Pocet=2 },
+            new Polozka{Nazev="kotevník",Cena=3,Pocet=2 },
+            new Polozka{Nazev="lilek",Cena=4,Pocet=2 }
             };
             foreach (Polozka c in polozky)
             {
@@ -53,18 +53,19 @@ namespace FlowHouse.Data
 
             var nakupy = new Nakup[]
             {
-            new Nakup{ZakaznikID=1,PolozkaID=1050},
-            new Nakup{ZakaznikID=1,PolozkaID=4022},
-            new Nakup{ZakaznikID=1,PolozkaID=4041},
-            new Nakup{ZakaznikID=2,PolozkaID=1045},
-            new Nakup{ZakaznikID=2,PolozkaID=3141},
-            new Nakup{ZakaznikID=2,PolozkaID=2021},
-            new Nakup{ZakaznikID=3,PolozkaID=1050},
-            new Nakup{ZakaznikID=4,PolozkaID=1050},
-            new Nakup{ZakaznikID=4,PolozkaID=4022},
-            new Nakup{ZakaznikID=5,PolozkaID=4041},
-            new Nakup{ZakaznikID=6,PolozkaID=1045},
-            new Nakup{ZakaznikID=7,PolozkaID=3141},
+           
+            new Nakup{ZakaznikID=1,PolozkaID=1},
+            new Nakup{ZakaznikID=1,PolozkaID=0},
+            new Nakup{ZakaznikID=1,PolozkaID=4},
+            new Nakup{ZakaznikID=2,PolozkaID=1},
+            new Nakup{ZakaznikID=2,PolozkaID=3},
+            new Nakup{ZakaznikID=2,PolozkaID=2},
+            new Nakup{ZakaznikID=3,PolozkaID=1},
+            new Nakup{ZakaznikID=4,PolozkaID=1},
+            new Nakup{ZakaznikID=4,PolozkaID=4},
+            new Nakup{ZakaznikID=5,PolozkaID=4},
+            new Nakup{ZakaznikID=6,PolozkaID=1},
+            new Nakup{ZakaznikID=7,PolozkaID=3},
             };
             foreach (Nakup e in nakupy)
             {

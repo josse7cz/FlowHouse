@@ -7,10 +7,11 @@ namespace FlowHouse.Models
 {
     public class Polozka
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+       // [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int PolozkaID { get; set; }
         public string Nazev { get; set; }
         public int Cena { get; set; }
+        public int Pocet { get; set; }
         public DateTime DatumNaskladneni { get; set; }
 
         public ICollection<Nakup> Nakupy { get; set; }

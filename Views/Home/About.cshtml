@@ -1,0 +1,32 @@
+﻿@model IEnumerable<FlowHouse.Models.ViewModels.EnrollmentDateGroup>
+
+@{
+    ViewData["Title"] = "Statistics";
+}
+
+<h2>Statistika zákazníků</h2>
+
+<table>
+    <tr>
+        <th>
+            Datum zápisu
+        </th>
+        <th>
+            Zákazník
+        </th>
+       
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.EnrollmentDate)
+    </td>
+    <td>
+        @item.ZakaznikCount
+    </td>
+   
+</tr>
+    }
+</table>
