@@ -156,3 +156,13 @@ C:\J\C#\FlowHouse\obj\Debug\net5.0\Razor\Views\Polozky\Details.cshtml.g.cs
 C:\J\C#\FlowHouse\obj\Debug\net5.0\Razor\Views\Polozky\Edit.cshtml.g.cs
 C:\J\C#\FlowHouse\obj\Debug\net5.0\Razor\Views\Polozky\Index.cshtml.g.cs
 C:\J\C#\FlowHouse\obj\Debug\net5.0\Razor\Views\Home\About.cshtml.g.cs
+C:\J\C#\FlowHouse\obj\Debug\net5.0\Razor\Views\Items\Create.cshtml.g.cs
+C:\J\C#\FlowHouse\obj\Debug\net5.0\Razor\Views\Items\Delete.cshtml.g.cs
+C:\J\C#\FlowHouse\obj\Debug\net5.0\Razor\Views\Items\Details.cshtml.g.cs
+C:\J\C#\FlowHouse\obj\Debug\net5.0\Razor\Views\Items\Edit.cshtml.g.cs
+C:\J\C#\FlowHouse\obj\Debug\net5.0\Razor\Views\Items\Index.cshtml.g.cs
+C:\J\C#\FlowHouse\obj\Debug\net5.0\Razor\Views\Prodavac\Create.cshtml.g.cs
+C:\J\C#\FlowHouse\obj\Debug\net5.0\Razor\Views\Prodavac\Delete.cshtml.g.cs
+C:\J\C#\FlowHouse\obj\Debug\net5.0\Razor\Views\Prodavac\Details.cshtml.g.cs
+C:\J\C#\FlowHouse\obj\Debug\net5.0\Razor\Views\Prodavac\Edit.cshtml.g.cs
+C:\J\C#\FlowHouse\obj\Debug\net5.0\Razor\Views\Prodavac\Index.cshtml.g.cs
