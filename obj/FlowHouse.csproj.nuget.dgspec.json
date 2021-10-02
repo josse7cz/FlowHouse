@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\J\\C#\\FlowHouse\\FlowHouse.csproj": {}
+    "C:\\J\\#C\\FlowHouse\\FlowHouse.csproj": {}
   },
   "projects": {
-    "C:\\J\\C#\\FlowHouse\\FlowHouse.csproj": {
+    "C:\\J\\#C\\FlowHouse\\FlowHouse.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\J\\C#\\FlowHouse\\FlowHouse.csproj",
+        "projectUniqueName": "C:\\J\\#C\\FlowHouse\\FlowHouse.csproj",
         "projectName": "FlowHouse",
-        "projectPath": "C:\\J\\C#\\FlowHouse\\FlowHouse.csproj",
-        "packagesPath": "C:\\Users\\CoolMaster\\.nuget\\packages\\",
-        "outputPath": "C:\\J\\C#\\FlowHouse\\obj\\",
+        "projectPath": "C:\\J\\#C\\FlowHouse\\FlowHouse.csproj",
+        "packagesPath": "C:\\Users\\Josef Janda\\.nuget\\packages\\",
+        "outputPath": "C:\\J\\#C\\FlowHouse\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\CoolMaster\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Josef Janda\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -43,6 +43,14 @@
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.10, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[5.0.9, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",

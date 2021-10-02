@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using FlowHouse.Data;
 using FlowHouse.Models.ViewModels;
-
-
+using Microsoft.AspNetCore.Authorization;
 
 namespace FlowHouse.Controllers
 {
+    [AllowAnonymous]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

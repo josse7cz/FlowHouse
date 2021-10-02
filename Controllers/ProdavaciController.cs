@@ -8,9 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using FlowHouse.Data;
 using FlowHouse.Models.ViewModels;
 using FlowHouse.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FlowHouse.Controllers
 {
+   // [Authorize]
     public class ProdavaciController : Controller
     {
         private readonly SkladContext _context;

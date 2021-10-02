@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using FlowHouse.Data;
 using FlowHouse.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FlowHouse.Controllers
 {
+    //[Authorize]
     public class NakupyController : Controller
     {
         private readonly SkladContext _context;

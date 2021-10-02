@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using FlowHouse.Data;
 using FlowHouse.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FlowHouse
 {
+   // [Authorize]
     public class ZakazniciController : Controller
     {
         private readonly SkladContext _context;
